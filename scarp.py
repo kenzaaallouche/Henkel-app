@@ -12,34 +12,30 @@ from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
 from msedge.selenium_tools import Edge, EdgeOptions
 
 class TestKetest():
-  def setup_method(self, method):
-    self.driver_path = r'msedgedriver.exe'
+    def setup_method(self, method):
+        # Chemin absolu vers le pilote WebDriver Edge
+        EDGE_DRIVER_PATH = r'msedgedriver.exe'
 
-    # Options du navigateur Edge
-    #edge_options = webdriver.EdgeOptions()
-    
+        # Options du navigateur Edge
+        edge_options = EdgeOptions()
 
-    # Spécifiez le chemin de téléchargement
-    prefs = {
-        #"download.default_directory": "C:\\Users\\deyha\\Desktop\\SCRAPPING",
-        "download.default_filename": "nom_du_fichier.extension",
-        "download.prompt_for_download": False,
-    }
+        # Spécifiez le chemin de téléchargement
+        prefs = {
+            "download.default_directory": "C:\\Users\\deyha\\Desktop\\SCRAPPING",
+            "download.default_filename": "nom_du_fichier.extension",
+            "download.prompt_for_download": False,
+        }
 
-    # Configurez les options du navigateur Edge avec les préférences
-    edge_options = webdriver.EdgeOptions()
-    
-    
-    edge_options.set_capability("ms:edgeChromium", True)
-    edge_options.add_experimental_option("prefs", prefs)
-    edge_options.use_chromium = True
-    #edge_options.add_argument("--headless")  # Activer le mode headless
-    
+        # Configurez les options du navigateur Edge avec les préférences
+        edge_options.set_capability("ms:edgeChromium", True)
+        edge_options.add_experimental_option("prefs", prefs)
+        edge_options.use_chromium = True
+        #edge_options.add_argument("--headless")  # Activer le mode headless
 
-    # Initialisation du navigateur Edge avec les options
-    self.driver = webdriver.Edge(executable_path=r'msedgedriver.exe', options=edge_options)
+        # Initialisation du navigateur Edge avec les options
+        self.driver = Edge(executable_path=EDGE_DRIVER_PATH, options=edge_options)
     
-    self.vars = {}
+        self.vars = {}
   
   def teardown_method(self, method):
     self.driver.quit()
