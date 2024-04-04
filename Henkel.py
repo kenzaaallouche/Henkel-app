@@ -7,10 +7,7 @@ import streamlit as st
 from scarp import TestKetest
 import pandas as pd
 import streamlit as st
-from mitosheet.streamlit.v1 import spreadsheet
 
-from streamlit_extras.metric_cards import style_metric_cards
-st.set_option('deprecation.showPyplotGlobalUse', False)
 
 @st.cache_data() 
 def load_data():
@@ -40,14 +37,7 @@ Item_Name=st.sidebar.multiselect(
 df_filtre = DF.loc[DF['Salesman No'].isin(SalesmanNo) & DF['Item Name'].isin(Item_Name)]
 
 
-# Ajouter du CSS personnalisé pour les éléments metric
-# Ajouter du CSS personnalisé pour les éléments metric
-# Ajouter du CSS personnalisé pour les éléments metric
 
-# Ajouter du CSS personnalisé pour les éléments metric
-
-
-# Afficher les éléments metric avec bordures, cadres et couleur de fond personnalisés
 a=DF["Net"].sum
 
 
