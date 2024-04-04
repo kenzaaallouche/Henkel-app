@@ -33,8 +33,7 @@ class TestKetest():
 
         # Initialisation du navigateur Edge avec les options
         self.driver = Edge(executable_path=EDGE_DRIVER_PATH, options=edge_options)
-    self.vars = {}
-  
+    #self.vars = {}
   def teardown_method(self, method):
     self.driver.quit()
   
