@@ -10,7 +10,6 @@ from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
 from msedge.selenium_tools import Edge, EdgeOptions
-
 class TestKetest():
     def setup_method(self, method):
         # Chemin absolu vers le pilote WebDriver Edge
@@ -34,7 +33,6 @@ class TestKetest():
 
         # Initialisation du navigateur Edge avec les options
         self.driver = Edge(executable_path=EDGE_DRIVER_PATH, options=edge_options)
-    
         self.vars = {}
   
   def teardown_method(self, method):
