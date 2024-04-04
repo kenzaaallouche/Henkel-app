@@ -11,7 +11,7 @@ download_dir = './drivers'
 
 # Télécharger le pilote Edge depuis GitHub
 response = requests.get(driver_url)
-zip_file_path = os.path.join(download_dir, 'msedgedriver.zip')
+zip_file_path = os.path.join('msedgedriver.zip')
 with open(zip_file_path, 'wb') as f:
     f.write(response.content)
 
