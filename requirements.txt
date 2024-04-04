@@ -7,5 +7,5 @@ babel
 plotly
 chromedriver-autoinstaller==0.2.2
 msedge-selenium-tools==3.141.3
-mitosheet
+
 
