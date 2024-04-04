@@ -21,7 +21,7 @@ class TestKetest():
 
     # Spécifiez le chemin de téléchargement
     prefs = {
-        "download.default_directory": "C:\\Users\\deyha\\Desktop\\SCRAPPING",
+        #"download.default_directory": "C:\\Users\\deyha\\Desktop\\SCRAPPING",
         "download.default_filename": "nom_du_fichier.extension",
         "download.prompt_for_download": False,
     }
