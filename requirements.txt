@@ -1,3 +1,4 @@
+
 pandas==1.4.4
 pyautogui==0.9.53
 streamlit==1.21.0
@@ -7,5 +8,5 @@ babel
 plotly
 chromedriver-autoinstaller==0.2.2
 msedge-selenium-tools==3.141.3
-
+pip install --upgrade streamlit
 
